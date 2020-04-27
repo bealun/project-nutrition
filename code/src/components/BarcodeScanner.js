@@ -1,4 +1,5 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
+// @ts-ignore
 import Quagga from "quagga";
 
 export const BarcodeScanner = ({ className, onDetected }) => {

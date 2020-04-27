@@ -7,36 +7,22 @@ export const ScanBarcode = () => {
   const dispatch = useDispatch()
   const [showScanner, setShowScanner] = useState(false)
 
-  // return (
-  //   <>
-      // {!showScanner && (
-      //   <button type="button" onClick={() => setShowScanner(true)}>
-      //     Show scanner
-      //   </button>
-      // )}
-
-      // {showScanner && (
-      //   <BarcodeScanner onDetected={(code) => {
-      //     console.log('Got barcode', code)
-      //     setShowScanner(false)
-      //   }} />
-      // )}
-  //   </>
-  // )
   return (
     <div>
       <label>
         {" "}
         Test codes here:{" "}
-        <input type="text" onChange={() => dispatch(fetchProduct())}></input>
+        <input type="text" onChange={(event) => dispatch(fetchProduct(event.target.value))}></input>
       </label>
       <p>
         {" "}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
+        7311070347272 - Pågen Gifflar. 
+        8005110413520 - Mutti tomato.
+        7622300245108 - O'boy.
+        5000396026993 -Digestive
       </p>
 
-      {/* {!showScanner && (
+      {!showScanner && (
         <button type="button" onClick={() => setShowScanner(true)}>
           Show scanner
         </button>
@@ -48,7 +34,7 @@ export const ScanBarcode = () => {
           setShowScanner(false)
           dispatch(fetchProduct(code))
         }} />
-      )} */}
+      )}
     {/* <BarcodeScanner onDetected={() => {dispatch(fetchProduct())}} ></BarcodeScanner> */}
   </div>
   )

@@ -18,7 +18,6 @@ export const fetchProduct = (code) => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
       .then((data) => data.json())
       .then((json) => {
-        // console.log('Fetch:', json);
         dispatch(products.actions.setProduct(json));
     });
   }
