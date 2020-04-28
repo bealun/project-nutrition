@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+.scannedContainer {
+  margin-top: 25px;
+  font-family: 'Roboto', sans-serif;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  margin: 30px 0px;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manualInput {
+  margin: 10px 5px;
+  height: 30px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 3px 5px;
+  border: none;
+  border-radius: 50px;
+  background: #e0eed4;
+  box-shadow: inset 5px 5px 10px #becab4, 
+              inset -5px -5px 10px #fffff4;
+}
+
+.manualInput:focus {
+  outline: none;
+}
+
+.scanButton {
+  font-family: 'Roboto', sans-serif;
+  height: 50px;
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #cad6bf, #f0ffe3);
+  box-shadow:  4px 4px 8px #becab4, 
+               -4px -4px 8px #fffff4;
+}
+
+.drawingBuffer {
+  height: 0;
+  width: 0;
+}
+
+video {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 670px) {
+  .scannedContainer {
+    width: 100%;
+  }
+
+  video {
+    width: 100%;
+    object-fit: cover;
+  }
+}
